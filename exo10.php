@@ -1,5 +1,4 @@
 <?php
-// 1. Déclaration du tableau multidimensionnel des employés
 $employes = [
     [
         "nom" => "Moussa",
@@ -18,20 +17,15 @@ $employes = [
     ]
 ];
 
-// Initialisation des variables pour les calculs
 $salaire_total = 0;
 
-// On prend le premier employé comme base pour trouver le salaire le plus élevé
 $employe_max = $employes[0];
 
-// 2. Boucle pour calculer le total et trouver le salaire le plus élevé
 foreach ($employes as $employe) {
-    // Calcul du salaire total de l'entreprise
     $salaire_total = $salaire_total + $employe["salaire"];
 
-    // Recherche de l'employé ayant le salaire le plus élevé
     if ($employe["salaire"] > $employe_max["salaire"]) {
-        $employe_max = $employe; // On remplace par le nouvel employé le plus riche
+        $employe_max = $employe; 
     }
 }
 ?>
@@ -43,7 +37,7 @@ foreach ($employes as $employe) {
     <title>Exercice 10 - Liste des Employés</title>
     <style>
         table {
-            width: 60%;
+            width: 10%;
             border-collapse: collapse;
             font-family: Arial, sans-serif;
             margin-bottom: 20px;
@@ -54,7 +48,7 @@ foreach ($employes as $employe) {
             text-align: left;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #000000;
             color: white;
         }
         tr {
@@ -62,10 +56,9 @@ foreach ($employes as $employe) {
         }
         .information {
             background-color: #e7f3fe;
-            border-left: 6px solid #2196F3;
             margin-bottom: 15px;
             padding: 10px;
-            width: 58%;
+            width: 9%;
             font-family: Arial, sans-serif;
         }
     </style>
